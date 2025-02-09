@@ -8,6 +8,7 @@
     ansible.builtin.apt:
       update_cache: yes
       install_recommends: yes
+      force_apt_get: yes
       upgrade: yes
       autoclean: yes
       autoremove: yes
