@@ -19,8 +19,6 @@
 
 - hosts: all
   become: true
-  roles:
-    - base
 
 - hosts: debian_servers
   become: true
