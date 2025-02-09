@@ -8,5 +8,7 @@
     ansible.builtin.apt:
       update_cache: yes
       install_recommends: yes
+      upgrade: "*"
+      autoclean: yes
       autoremove: yes
     when: ansible_distribution == "Debian"
