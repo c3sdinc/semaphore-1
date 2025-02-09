@@ -6,7 +6,7 @@
   - name: install updates for Debian
     tags: always
     ansible.builtin.apt:
-      update_cache: yes
+      apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
       install_recommends: yes
       autoremove: yes
     when: ansible_distribution == "Debian"
