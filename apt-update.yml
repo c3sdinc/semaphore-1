@@ -19,13 +19,3 @@
 
 - hosts: all
   become: true
-
-- hosts: debian_servers
-  become: true
-  roles:
-    - debian_servers
-
-- hosts: ubuntu_servers
-  become: true
-  roles:
-    - ubuntu_servers
