@@ -7,6 +7,6 @@
     tags: always
     ansible.builtin.apt:
       update_cache: yes
-      only_upgrade: yes
+      install_recommends: yes
       autoremove: yes
     when: ansible_distribution == "Debian"
