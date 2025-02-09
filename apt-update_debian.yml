@@ -9,15 +9,11 @@
       update_cache: yes
       install_recommends: yes
       force_apt_get: yes
-      upgrade: yes
+      upgrade: dist
       autoclean: yes
       autoremove: yes
     when: ansible_distribution == "Debian"
 
-- name: Upgrade all packages on servers
-   apt:
-     upgrade: dist
-     force_apt_get: yes
     
 - name: Check if a reboot is needed on all servers
    register: reboot_required_file
