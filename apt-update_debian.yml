@@ -6,6 +6,7 @@
   - name: install updates for Debian
     tags: always
     ansible.builtin.apt:
-      update_only: yes
       update_cache: yes
+      only_upgrade: yes
+      auto_remove: yes
     when: ansible_distribution == "Debian"
